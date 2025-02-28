@@ -1,6 +1,7 @@
 FROM ruby:2.6.10
 WORKDIR /app
-RUN apt-get update
+RUN apt-get update -y
+RUN apt-get upgrade -y
 RUN apt-get install nodejs -y
 RUN apt-get install postgresql-client -y
 COPY Gemfile Gemfile.lock ./
